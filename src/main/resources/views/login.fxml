@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="450" prefWidth="700" style="-fx-background-color: linear-gradient(to bottom right, #83a4d4, #b6fbff);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+
+    <!-- Welcome Title -->
+    <Label fx:id="welcomeText" layoutX="95.0" layoutY="39.0" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI Semibold'; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0.5, 0, 1);" text="PAYROLL MANAGEMENT SYSTEM" />
+
+    <!-- Login Card -->
+    <VBox layoutX="17.0" layoutY="100" prefHeight="275.0" prefWidth="666.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 0);">
+
+        <GridPane hgap="10" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" prefWidth="100" />
+                <ColumnConstraints prefWidth="250" />
+            </columnConstraints>
+
+            <!-- Username -->
+            <Label style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="usernameField" promptText="Enter username" style="-fx-background-radius: 8; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <!-- Password -->
+            <Label style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <PasswordField fx:id="passwordField" promptText="Enter password" style="-fx-background-radius: 8; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <!-- Role -->
+            <Label style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <ComboBox fx:id="roleComboBox" promptText="Select Role" style="-fx-background-radius: 8; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Login Button -->
+        <Button fx:id="loginButton" style="-fx-background-color: pink; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 10 30;" text="Login" />
+
+        <!-- Status Message -->
+        <Label fx:id="loginStatus" style="-fx-text-fill: #e74c3c; -fx-font-size: 14px; -fx-font-weight: bold; -fx-alignment: center;" />
+
+    </VBox>
+
+</AnchorPane>
